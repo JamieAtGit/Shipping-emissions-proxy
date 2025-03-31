@@ -1,0 +1,17 @@
+{
+  "name": "dsproject",
+  "version": "1.0.0",
+  "description": "Copy-Item -Path .\\ReactPopup\\dist -Destination .\\Extension\\ -Recurse -Force",
+  "main": "index.js",
+  "scripts": {
+    "start": "node proxy.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2"
+  }
+}
