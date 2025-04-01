@@ -13,7 +13,7 @@ app.post('/emissions', async (req, res) => {
   try {
     console.log("Received emission request:", req.body); // 🪵 Debug log
 
-    const response = await fetch('https://www.carboninterface.com/api/v1/estimates', {
+    const response = await fetch('https://www.carboninterface.com/api/v1/shipments', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${process.env.CARBON_API_KEY}`,
