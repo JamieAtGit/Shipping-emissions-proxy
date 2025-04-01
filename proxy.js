@@ -13,7 +13,7 @@ app.post('/emissions', async (req, res) => {
     const response = await fetch('https://www.carboninterface.com/api/v1/estimates', {
       method: 'POST',
       headers: {
-        Authorization: 'I4RDfpabCApH53rqkUAQ', // 👈 replace this
+        Authorization: `Bearer ${process.env.CARBON_API_KEY}`,  // ✅ dynamic!
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(req.body)
