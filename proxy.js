@@ -19,15 +19,22 @@ app.post('/emissions', async (req, res) => {
         Authorization: `Bearer ${process.env.CARBON_API_KEY}`,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(req.body)
+      body: JSON.stringify({
+        type: "shipment",
+        weight_value: req.body.weight_value,
+        weight_unit: req.body.weight_unit,
+        distance_value: req.body.distance_value,
+        distance_unit: req.body.distance_unit,
+        transport_method: "truck"  // ✅ Required for actual data
+      })
     });
 
     const data = await response.json();
-    console.log("Carbon API response:", data); // 🪵 Debug log
+    console.log("Carbon API response:", data); // Debug log
 
     res.json(data);
   } catch (err) {
-    console.error("Error in /emissions:", err); // 💥 This will show in Render
+    console.error("Error in /emissions:", err); // This will show in Render
     res.status(500).json({ error: 'Failed to fetch emissions' });
   }
 });
