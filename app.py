@@ -1,7 +1,10 @@
 from flask import Flask, request, jsonify, session
 from flask_cors import CORS
 import joblib
+import sys
 import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 import pandas as pd
 from Extension.scrape_amazon_titles import (scrape_amazon_product_page,estimate_origin_country, resolve_brand_origin,save_brand_locations)
 
