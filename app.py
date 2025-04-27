@@ -64,6 +64,16 @@ def get_feature_importance():
         return jsonify({"error": str(e)}), 500
 
 
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "🚀 Shipping Emissions Proxy backend is running!"
+
+
+
 def to_python_type(obj):
     import numpy as np
     if isinstance(obj, (np.integer, np.int64, np.int32)):
@@ -426,5 +436,9 @@ def health():
 def home():
     return "<h2>🌍 EcoImpact API is Live</h2>"
 
+
 if __name__ == "__main__":
     app.run(debug=True)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
