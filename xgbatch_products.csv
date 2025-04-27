@@ -1,0 +1,4 @@
+material,weight,transport,recyclability,origin
+Bamboo,0.5,Ship,High,China
+Aluminum,1.0,Land,Medium,Germany
+Glass,2.0,Ship,High,France

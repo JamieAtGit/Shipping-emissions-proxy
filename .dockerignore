@@ -1,0 +1,26 @@
+Docker ignore
+
+*.log
+*.csv
+*.json
+__pycache__/
+*.pkl
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.mp4
+.idea/
+.vscode/
+node_modules/
+dist/
+build/
+xgb_model.json
+xgb_model_optimized.json
+*.zip
+*.exe
+.DS_Store
+.env
+ReactPopup/
+Website/
+*.json

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eco Choice User Study</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #2d6a4f;
+    }
+
+    .product {
+      background: #ffffff;
+      padding: 1em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 2em;
+    }
+
+    .comparison {
+      display: flex;
+      gap: 2em;
+      justify-content: space-between;
+    }
+
+    .questionnaire {
+      margin-top: 2em;
+    }
+
+    textarea, select {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.5em;
+      margin-bottom: 1em;
+    }
+
+    button {
+      padding: 0.7em 1.5em;
+      font-size: 1em;
+      background: #2d6a4f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1b4332;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧪 Eco-Friendly Shopping Decision Test</h1>
+  <p>Please take a moment to look at the two product cards below. Then answer the questions honestly — your answers will help us evaluate this tool!</p>
+
+  <div class="comparison">
+    <div class="product">
+      <h2>Product A</h2>
+      <ul>
+        <li><strong>Name:</strong> Whey Protein Banana</li>
+        <li><strong>Material:</strong> Plastic</li>
+        <li><strong>Weight:</strong> 2.54 kg</li>
+        <li><strong>Origin:</strong> Ireland</li>
+        <li><strong>Transport:</strong> Land</li>
+        <li><strong>Recyclability:</strong> Medium</li>
+        <li><strong>Eco Score (ML):</strong> <strong>E</strong></li>
+        <li><strong>Baseline Carbon Estimate:</strong> 5.08 kg CO₂</li>
+      </ul>
+    </div>
+
+    <div class="product">
+      <h2>Product B</h2>
+      <ul>
+        <li><strong>Name:</strong> Organic Pea Protein</li>
+        <li><strong>Material:</strong> Paper</li>
+        <li><strong>Weight:</strong> 2.0 kg</li>
+        <li><strong>Origin:</strong> UK</li>
+        <li><strong>Transport:</strong> Land</li>
+        <li><strong>Recyclability:</strong> High</li>
+        <li><strong>Eco Score (ML):</strong> <strong>B</strong></li>
+        <li><strong>Baseline Carbon Estimate:</strong> 1.2 kg CO₂</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="questionnaire">
+    <h2>📝 Questions</h2>
+
+    <label>1. Which product would you buy based on the information above?</label>
+    <select>
+      <option value="">-- Select an answer --</option>
+      <option>Product A</option>
+      <option>Product B</option>
+    </select>
+
+    <label>2. Did the eco score or carbon estimate influence your decision?</label>
+    <select>
+      <option value="">-- Select an answer --</option>
+      <option>Yes</option>
+      <option>No</option>
+      <option>Somewhat</option>
+    </select>
+
+    <label>3. Any feedback or thoughts?</label>
+    <textarea rows="4" placeholder="Your feedback..."></textarea>
+
+    <button onclick="alert('✅ Thanks for your feedback! You can close this tab now.')">Submit</button>
+  </div>
+</body>
+</html>
